@@ -5,15 +5,15 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.frontend.rule.type: PathPrefixStrip
   creationTimestamp: null
-  name: metrics-demo
+  name: florent-brice
   namespace: dev
 spec:
   rules:
   - http:
       paths:
       - backend:
-          serviceName: metrics-demo
+          serviceName: florent-brice
           servicePort: 3000
-        path: /metrics-demo
+        path: /whisky
 status:
   loadBalancer: {}
