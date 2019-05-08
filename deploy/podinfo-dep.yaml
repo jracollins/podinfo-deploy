@@ -15,6 +15,7 @@ spec:
         app: podinfo
       annotations:
         prometheus.io/scrape: 'true'
+        florent.was.here: 'yes'
     spec:
       containers:
       - name: podinfod
