@@ -21,9 +21,10 @@ spec:
       containers:
       - name: florent-brice
         image: quay.io/brice/metrics-demo:master
-        #command:
-        #- ./florent-brice
-        #- --port=9898
+        command:
+        - sh
+        - -c
+        - "sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
         ports:
         - containerPort: 3000
         readinessProbe:
