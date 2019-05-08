@@ -18,13 +18,21 @@ spec:
       annotations:
         prometheus.io/scrape: 'true'
     spec:
+      volumes:
+      - name: config-volume
+        configMap:
+          name: florent-brice
       containers:
       - name: florent-brice
         image: quay.io/brice/metrics-demo:master
         command:
         - sh
         - -c
-        - "sed -ibak 's/mighty-fine/whisky/g' *.json && sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
+        - "sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
+        volumeMounts:
+        - name: config-volume
+          mountPath: /catalogue.json
+          subPath: catalogue.json
         ports:
         - containerPort: 3000
         readinessProbe:
