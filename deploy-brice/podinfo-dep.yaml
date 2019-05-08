@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: florent-brice
-        image: quay.io/brice/florent-brice:v4-subscription-service
+        image: quay.io/brice/metrics-demo:v4-subscription-service
         #command:
         #- ./florent-brice
         #- --port=9898
