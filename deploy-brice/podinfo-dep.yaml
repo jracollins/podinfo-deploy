@@ -24,7 +24,7 @@ spec:
         command:
         - sh
         - -c
-        - "sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
+        - "sed -ibak 's/mighty-fine/whisky/g' *.json && sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
         ports:
         - containerPort: 3000
         readinessProbe:
