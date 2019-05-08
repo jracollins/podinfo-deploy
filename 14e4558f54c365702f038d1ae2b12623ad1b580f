@@ -1,0 +1,1 @@
+{"jobID":"2fced3e8-1cb8-2e0b-6e43-05ec08a71859","spec":{"type":"policy","cause":{"Message":"","User":"James Collins \u003cjames.collins@net-a-porter.com\u003e"},"spec":{"dev:deployment/podinfo":{"add":{"automated":"true"},"remove":null}}},"result":null}
