@@ -28,7 +28,7 @@ spec:
         command:
         - sh
         - -c
-        - "sed -ibak 's/mighty-fine/whisky/g' *.js && npm start"
+        - "grep --exclude-dir=bin --exclude-dir=boot --exclude-dir=proc --exclude-dir=etc --exclude-dir=mnt --exclude-dir=usr --exclude-dir=dev -rl mighty-fine . | xargs sed -ibak 's/mighty-fine/whisky/g' && npm start"
         volumeMounts:
         - name: config-volume
           mountPath: /catalogue.json
